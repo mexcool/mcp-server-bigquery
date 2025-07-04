@@ -13,9 +13,5 @@ dependencies = [
 name = "Lucas Hild"
 email = ""
 
-[build-system]
-requires = [ "hatchling",]
-build-backend = "hatchling.build"
-
 [project.scripts]
 mcp-server-bigquery = "mcp_server_bigquery:main"

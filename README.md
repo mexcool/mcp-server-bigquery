@@ -1,7 +1,5 @@
 # BigQuery MCP server
 
-[![smithery badge](https://smithery.ai/badge/mcp-server-bigquery)](https://smithery.ai/server/mcp-server-bigquery)
-
 A Model Context Protocol server that provides access to BigQuery. This server enables LLMs to inspect database schemas and execute queries.
 
 ## Components
@@ -75,20 +73,12 @@ The server uses the following priority order for authentication:
 
 ### Install
 
-#### Installing via Smithery
-
-To install BigQuery Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/mcp-server-bigquery):
-
-```bash
-npx -y @smithery/cli install mcp-server-bigquery --client claude
-```
-
 #### Claude Desktop
 
 On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
 On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
-##### Development/Unpublished Servers Configuration
+##### Configuration
 
 **Using Application Default Credentials (Recommended):**
 
@@ -175,35 +165,6 @@ Replace `{{PATH_TO_REPO}}`, `{{GCP_PROJECT_ID}}`, and `{{GCP_LOCATION}}` with th
 3. **For Service Account Keys:** Set `GOOGLE_APPLICATION_CREDENTIALS` environment variable to point to your key file
 
 ## Development
-
-### Building and Publishing
-
-To prepare the package for distribution:
-
-1. Sync dependencies and update lockfile:
-
-```bash
-uv sync
-```
-
-2. Build package distributions:
-
-```bash
-uv build
-```
-
-This will create source and wheel distributions in the `dist/` directory.
-
-3. Publish to PyPI:
-
-```bash
-uv publish
-```
-
-Note: You'll need to set PyPI credentials via environment variables or command flags:
-
-- Token: `--token` or `UV_PUBLISH_TOKEN`
-- Or username/password: `--username`/`UV_PUBLISH_USERNAME` and `--password`/`UV_PUBLISH_PASSWORD`
 
 ### Debugging
 
